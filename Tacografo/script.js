@@ -17,11 +17,11 @@ buttons.each(function () {
         button.children(':last-child').addClass("hidding");
     });
 });
-$('#up').click(function (e) { 
+$('#up').click(function (e) {
     e.preventDefault();
     nextScreen()
 });
-$('#down').click(function (e) { 
+$('#down').click(function (e) {
     e.preventDefault();
     prevScreen()
 });
@@ -151,12 +151,16 @@ intervalosRegistrados = cargarIntervalosDesdeLocalStorage();
 
 async function fetchData() {
     try {
-        const response = await fetch('./api-run.json');
-        if (!response.ok) {
-            throw new Error('Error al obtener los datos');
-        }
-        const newData = await response.json();
-        newData.game.time = new Date().toISOString();
+        const response = await fetch('http://127.0.0.1:25555/api/ets2/telemetry', {
+            method: 'GET',
+            mode: 'no-cors', // Asegúrate de que el modo sea 'cors'
+            headers: {
+                'Accept': 'application/json',
+                // Puedes agregar más cabeceras si es necesario
+            },
+        });
+        const newData = await response;
+       console.log(newData)
         if (fakeStop) {
             newData.truck.speed = 0
         }
@@ -164,9 +168,9 @@ async function fetchData() {
         actualizarIntervalosDeTiempo();
         registrosDeTiempo.push(newData.game.time); // Agrega la marca de tiempo a los registros
         const tiempoDeActividad = calcularTiempoDeActividad();
-        console.log("Tiempo de conducción: " + tiempoDeActividad.tiempoTotalConduciendo/1000 + " segundos");
-        console.log("Tiempo de descanso: " + tiempoDeActividad.tiempoTotalDescansando/1000 + " segundos");
-        console.log("Tiempo pausado: " + tiempoDeActividad.tiempoTotalPausado/1000 + " segundos");
+        console.log("Tiempo de conducción: " + tiempoDeActividad.tiempoTotalConduciendo / 1000 + " segundos");
+        console.log("Tiempo de descanso: " + tiempoDeActividad.tiempoTotalDescansando / 1000 + " segundos");
+        console.log("Tiempo pausado: " + tiempoDeActividad.tiempoTotalPausado / 1000 + " segundos");
         console.log(determinarEstadoActual())
 
         guardarIntervalosEnLocalStorage();
@@ -189,11 +193,11 @@ function nextScreen() {
     var $next = $current.next('.screen').length ? $current.next('.screen') : $('.screen:first');
     $current.removeClass('active');
     $next.addClass('active');
-  }
-  
-  function prevScreen() {
+}
+
+function prevScreen() {
     var $current = $('.screen.active');
     var $prev = $current.prev('.screen').length ? $current.prev('.screen') : $('.screen:last');
     $current.removeClass('active');
     $prev.addClass('active');
-  }
+}

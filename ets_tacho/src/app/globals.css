@@ -25,147 +25,203 @@
   font-family: JustusDisplay;
 }
 
-.display1 .column1{}
-.display1 .column2{}
-.display1 .column3{}
-.display1 .column4{}
-.display1 .column5{}
+.display1{
+  align-items: center;
+}
+
+.display1 .column1 {
+  width: 13%;
+  font-size: 2.4em;
+  font-family: JustusDisplayHiRes;
+}
+
+.display1 .column2 {
+  width: 7%;
+  font-size: 1em;
+  font-family: JustusDisplay;
+}
+
+.display1 .column3 {
+  width: 32%;
+  font-size: 2.4em;
+  font-family: JustusDisplayHiRes;
+}
+
+.display1 .column4 {
+  width: 10%;
+  font-size: 1.8em;
+  margin-top: 2%;
+  font-family: JustusDisplay;
+}
+
+.display1 .column5 {
+  font-family: JustusDisplay;
+  width: 18%;
+}
+.display2{
+  flex-direction: column;
+  align-items: center;
+}
+
+#largeicon {
+  width: 20%;
+  clear: none;
+  float: left;
+  padding-top: 3%;
+}
+
+#largeicon .largeicon-img {
+  height: 2em;
+  width: 2em;
+}
 
 /* Copyright (c) Stoneridge Electronics AB 2007 - All rights reserved */
 
-body  {
+body {
   /* background image file default is images/bgimage.jpg, can be modified in index.html */
-  background:#ffffff;
+  background: #ffffff;
 }
 
-* { 
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);   
-} 
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 
 
 .bgimage {
-  width:100%;
+  width: 100%;
   z-index: -1;
   position: absolute;
 }
 
 
 #speed {
-display: inline-block;
+  display: inline-block;
   width: 50px;
-  text-align:center;
+  text-align: center;
 }
 
-#slot1open{
-position:absolute;
-left:6.9%;
-top:73.3%;
-width:33.33333%;
-height:25%;
-cursor :pointer;
-background: #FFF; /* you can choose any colour you like, 1.0-fully visible */
-opacity:0.0;      /* opacity setting for all browsers except IE */
-filter: alpha(opacity = 0); /* opacity setting for IE, 0-transparent & 100-fully visible */
-
-
-}
-
-#slot2open{
-position:absolute;
-left:60.3%;
-top:72.6%;
-width:34.513888888889%;
-height:25%;
- cursor :pointer;
- background: #FFF; /* you can choose any colour you like, 1.0-fully visible */
-opacity:0.0;      /* opacity setting for all browsers except IE */
-filter: alpha(opacity = 0); /* opacity setting for IE, 0-transparent & 100-fully visible */
+#slot1open {
+  position: absolute;
+  left: 6.9%;
+  top: 73.3%;
+  width: 33.33333%;
+  height: 25%;
+  cursor: pointer;
+  background: #FFF;
+  /* you can choose any colour you like, 1.0-fully visible */
+  opacity: 0.0;
+  /* opacity setting for all browsers except IE */
+  filter: alpha(opacity=0);
+  /* opacity setting for IE, 0-transparent & 100-fully visible */
 
 
 }
-#slot1select{
-position:absolute;
-left:36.4%;
-top:84.3%;
-width:2%;
-height:auto;
- cursor :pointer;
+
+#slot2open {
+  position: absolute;
+  left: 60.3%;
+  top: 72.6%;
+  width: 34.513888888889%;
+  height: 25%;
+  cursor: pointer;
+  background: #FFF;
+  /* you can choose any colour you like, 1.0-fully visible */
+  opacity: 0.0;
+  /* opacity setting for all browsers except IE */
+  filter: alpha(opacity=0);
+  /* opacity setting for IE, 0-transparent & 100-fully visible */
+
+
 }
-#slot2select{
-position:absolute;
-left:62.3%;
-top:84.3%;
-width:2%;
-height:auto;
- cursor :pointer;
+
+#slot1select {
+  position: absolute;
+  left: 36.4%;
+  top: 84.3%;
+  width: 2%;
+  height: auto;
+  cursor: pointer;
 }
-#map{
-position:absolute;
-left:51.5%;
-top:10%;
-height:30%;
-width:45.4%;
+
+#slot2select {
+  position: absolute;
+  left: 62.3%;
+  top: 84.3%;
+  width: 2%;
+  height: auto;
+  cursor: pointer;
 }
-#earth{
-position:absolute;
-left:51.5%;
-top:10%;
-height:30%;
-width:45.4%;
+
+#map {
+  position: absolute;
+  left: 51.5%;
+  top: 10%;
+  height: 30%;
+  width: 45.4%;
 }
+
+#earth {
+  position: absolute;
+  left: 51.5%;
+  top: 10%;
+  height: 30%;
+  width: 45.4%;
+}
+
 #driver {
-position:absolute;
-left:1%;
-top:100%;
+  position: absolute;
+  left: 1%;
+  top: 100%;
 }
 
-#drivercontrol{
-align:left;
-width:400px;
-clear:left;
-float:left;
-}
-#left{
-align:left;
-width:200px;
-clear:left;
-float:left;
+#drivercontrol {
+  align: left;
+  width: 400px;
+  clear: left;
+  float: left;
 }
 
-#right{
-align:left;
-display:block;
-width:200px;
-clear:right;
-float:left;
+#left {
+  align: left;
+  width: 200px;
+  clear: left;
+  float: left;
+}
+
+#right {
+  align: left;
+  display: block;
+  width: 200px;
+  clear: right;
+  float: left;
 }
 
 
-#simulator { 
-background-repeat: repeat-x;
-font-family: JustusDisplay;
-color: #000000;
-margin-left:1%;
-margin-right:1%;
-font-shadow:0px;
--webkit-user-select: none;
--khtml-user-select: none;
--moz-user-select: none;
--o-user-select: none;
-user-select: none;
+#simulator {
+  background-repeat: repeat-x;
+  font-family: JustusDisplay;
+  color: #000000;
+  margin-left: 1%;
+  margin-right: 1%;
+  font-shadow: 0px;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 
 }
 
 .column {
-height:100%;
-width:10%;
-float:left;
-clear:none;
+  height: 100%;
+  width: 10%;
+  float: left;
+  clear: none;
 }
 
 #background {
-width: 100% !important;
-height:auto;
+  width: 100% !important;
+  height: auto;
 }
 
 #backgroundimage {
@@ -174,531 +230,551 @@ height:auto;
   position: fixed;
 }
 
-#emulator{
-margin-left:auto; 
-margin-right:auto; 
-margin-top:1%;
-width: 555px;
-max-width: 555px;
-height:auto;
-position:relative;
-z-index:10;
+#emulator {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1%;
+  width: 555px;
+  max-width: 555px;
+  height: auto;
+  position: relative;
+  z-index: 10;
 }
 
 #info {
-padding-top:1%;
-padding-left:1%;
-display:none;
+  padding-top: 1%;
+  padding-left: 1%;
+  display: none;
 }
 
-#buttons{
-display:none;
+#buttons {
+  display: none;
 }
 
-#vubuttons{
-float:left;
-clear:none;
+#vubuttons {
+  float: left;
+  clear: none;
 }
-#drivebuttons{
 
-float:left;
-clear:none;
+#drivebuttons {
+
+  float: left;
+  clear: none;
 }
 
 
 
 
 #smallicon {
-clear: none; 
-float: left; 
-margin-top: -4%; 
-padding-right: 15%;
-width: 1.5em;
+  clear: none;
+  float: left;
+  margin-top: -4%;
+  padding-right: 15%;
+  width: 1.5em;
 }
 
 .display {
-font-family: 'JustusDisplay';
-color: #000000;
-text-shadow:none;
-height:28%;
-z-index:100;
-width:39%;
-top:24.2%;
-left:8.9%;
-margin:0;
-position:absolute;
-display:flex;
-text-align:left;
+  font-family: 'JustusDisplay';
+  color: #000000;
+  text-shadow: none;
+  height: 28%;
+  z-index: 100;
+  width: 39%;
+  top: 24.2%;
+  left: 8.9%;
+  margin: 0;
+  position: absolute;
+  display: flex;
+  text-align: left;
 }
 
 .smallscreen .display {
-left: 14%;
-width: 64%;
+  left: 14%;
+  width: 64%;
 }
 
 .smallscreen #ok {
-left: 62.8%;
-top: 60.6%;
-width: 10.25%;
+  left: 62.8%;
+  top: 60.6%;
+  width: 10.25%;
 }
 
 .smallscreen #up {
-left: 36.75%;
-width: 7.25%;
+  left: 36.75%;
+  width: 7.25%;
 }
 
 .smallscreen #down {
-left: 48.75%;
-width: 7.25%;
+  left: 48.75%;
+  width: 7.25%;
 }
 
 .smallscreen #back {
-left: 20%;
-width: 10.25%;
-top: 59.9%;
+  left: 20%;
+  width: 10.25%;
+  top: 59.9%;
 }
 
 .smallscreen #one {
-width: 10.25%;
-top: 79.3%;
-left: 68.5%;
+  width: 10.25%;
+  top: 79.3%;
+  left: 68.5%;
 }
 
 .smallscreen #two {
-width: 10.25%;
-left: 88%;
-top: 79.5%;
+  width: 10.25%;
+  left: 88%;
+  top: 79.5%;
 }
 
 
 .centertext {
-text-align:center;
+  text-align: center;
 }
 
 .centerprinterblock {
-padding-left:3.2em;
+  padding-left: 3.2em;
 }
 
 .row1 {
-padding-top:1%;
-padding-left:1%;
-height:50%;
+  display: flex;
+  flex-direction: row;
+  padding-top: 1%;
+  padding-left: 1%;
+  height: 50%;
 }
+
 .row2 {
-padding-top:0%;
-padding-left:1%;
-height:50%;
+  display: flex;
+  flex-direction: row;
+  padding-top: 0%;
+  padding-left: 1%;
+  height: 50%;
 }
 
 .row1Smallmenu {
-display:inline; 
-position:absolute; 
-top:1%;
+  display: inline;
+  position: absolute;
+  top: 1%;
 }
 
 .row1SmallmenuIcon {
-left:26%;
+  left: 26%;
 }
 
 
 .doublerow {
-padding-top:0%;
-left:20.9%;
-height:100%;
+  padding-top: 0%;
+  left: 20.9%;
+  height: 100%;
 }
 
 .arrowup {
-position: absolute; 
-height: 0.8em; 
-width: 1em; 
-top: 2%; 
-right: 1%;
+  position: absolute;
+  height: 0.8em;
+  width: 1em;
+  top: 2%;
+  right: 1%;
 }
 
 .arrowdown {
-position: absolute; 
-height: 0.8em; 
-width: 1em; 
-bottom: 5%; 
-right: 1%;
+  position: absolute;
+  height: 0.8em;
+  width: 1em;
+  bottom: 5%;
+  right: 1%;
 }
 
 .arrowupanswer {
-position: absolute; 
-height: 0.6em; 
-width: 1.3em; 
-top: 3%; 
-right: 8%;
+  position: absolute;
+  height: 0.6em;
+  width: 1.3em;
+  top: 3%;
+  right: 8%;
 }
 
 .arrowdownanswer {
-position: absolute; 
-height: 0.6em; 
-width: 1.3em; 
-bottom: 5%; 
-right: 8%;
+  position: absolute;
+  height: 0.6em;
+  width: 1.3em;
+  bottom: 5%;
+  right: 8%;
 }
 
 .smallerarrowupanswer {
-position: absolute; 
-height: 0.4em; 
-width: 1.0em; 
-top: 1%; 
-right: 5%;
+  position: absolute;
+  height: 0.4em;
+  width: 1.0em;
+  top: 1%;
+  right: 5%;
 }
 
 .smallerarrowdownanswer {
-position: absolute; 
-height: 0.4em; 
-width: 1.0em; 
-bottom: 1%; 
-right: 5%;
+  position: absolute;
+  height: 0.4em;
+  width: 1.0em;
+  bottom: 1%;
+  right: 5%;
 }
 
 
 .arrowUpWideSelector {
-position: absolute; 
-height: 0.5em; 
-width: 1em; 
-top: 8%;
-left: 47%;
+  position: absolute;
+  height: 0.5em;
+  width: 1em;
+  top: 8%;
+  left: 47%;
 }
 
 .arrowDownWideDelector {
-position: absolute; 
-height: 0.5em; 
-width: 1em; 
-bottom: 11%;
-left: 47%;
+  position: absolute;
+  height: 0.5em;
+  width: 1em;
+  bottom: 11%;
+  left: 47%;
 }
 
 .boxanswer {
-position: absolute; 
-bottom: 27%;
-right: 0%; 
-width: 3.0em; 
-height: 0.7em;
-background: #000000; 
-color: #76c140;
-text-align:center;
-padding-left: 3%; 
-padding-right: 1%;
-padding-top: 1.6%;
-padding-bottom: 4%;
+  position: absolute;
+  bottom: 27%;
+  right: 0%;
+  width: 3.0em;
+  height: 0.7em;
+  background: #000000;
+  color: #76c140;
+  text-align: center;
+  padding-left: 3%;
+  padding-right: 1%;
+  padding-top: 1.6%;
+  padding-bottom: 4%;
 }
+
 .biggerboxanswer {
-position: absolute; 
-bottom: 1%;
-right: 1%; 
-width: 2.0em; 
-height: 2.0em;
-text-align:center;
-padding-left: 3%; 
-padding-right: 1%;
-padding-top: 1.6%;
-padding-bottom: 4%;
+  position: absolute;
+  bottom: 1%;
+  right: 1%;
+  width: 2.0em;
+  height: 2.0em;
+  text-align: center;
+  padding-left: 3%;
+  padding-right: 1%;
+  padding-top: 1.6%;
+  padding-bottom: 4%;
 }
 
 .rightposition {
-right:0;
-position:absolute;
+  right: 0;
+  position: absolute;
 }
 
-#back{
-z-index:100;  
-width:6.25%;
-height:auto;
-top:59.9%;
-left:12.19%;
-position:absolute;
+#back {
+  z-index: 100;
+  width: 6.25%;
+  height: auto;
+  top: 59.9%;
+  left: 12.19%;
+  position: absolute;
 }
 
-#back img{
-width:100%;
-height:auto;
+#back img {
+  width: 100%;
+  height: auto;
 }
 
-#up{
-z-index:100;  
-width:4.25%;
-height:auto;
-top:59.9%;
-left:22.5%;
-position:absolute;
+#up {
+  z-index: 100;
+  width: 4.25%;
+  height: auto;
+  top: 59.9%;
+  left: 22.5%;
+  position: absolute;
 }
 
-#up img{
-width:100%;
-height:auto;
+#up img {
+  width: 100%;
+  height: auto;
 }
 
-#down{
-z-index:100;  
-width:4.25%;
-height:auto;
-top:59.9%;
-left:29.65%;
-position:absolute;
+#down {
+  z-index: 100;
+  width: 4.25%;
+  height: auto;
+  top: 59.9%;
+  left: 29.65%;
+  position: absolute;
 }
 
-#down img{
-width:100%;
-height:auto;
+#down img {
+  width: 100%;
+  height: auto;
 }
 
-#ok{
-z-index:100;  
-width:6.25%;
-height:auto;
-top:59.9%;
-left:37.8%;
-position:absolute;
+#ok {
+  z-index: 100;
+  width: 6.25%;
+  height: auto;
+  top: 59.9%;
+  left: 37.8%;
+  position: absolute;
 }
 
-#ok img{
-width:100%;
-height:auto;
+#ok img {
+  width: 100%;
+  height: auto;
 }
 
-#one{
-z-index:100;  
-width:6.9%;
-height:auto;
-top:77.9%;
-left:41.1%;
-position:absolute;
+#one {
+  z-index: 100;
+  width: 6.9%;
+  height: auto;
+  top: 77.9%;
+  left: 41.1%;
+  position: absolute;
 }
 
-#one img{
-width:100%;
-height:auto;
+#one img {
+  width: 100%;
+  height: auto;
 }
 
-#two{
-z-index:100;  
-width:6.9%;
-height:auto;
-top:77.9%;
-left:53.2%;
-position:absolute;
+#two {
+  z-index: 100;
+  width: 6.9%;
+  height: auto;
+  top: 77.9%;
+  left: 53.2%;
+  position: absolute;
 }
 
-#two img{
-width:100%;
-height:auto;
+#two img {
+  width: 100%;
+  height: auto;
 }
 
-.displaying {
-}
+.displaying {}
 
 .hidding {
-display: none;
-height: 0em;
-width: 0em;
+  display: none;
+  height: 0em;
+  width: 0em;
 }
 
 .helptext {
-font-family: 'Arial';
-font-size: 1.2em;
-color: #000000;
-text-shadow:none;
-height:28%;
+  font-family: 'Arial';
+  font-size: 1.2em;
+  color: #000000;
+  text-shadow: none;
+  height: 28%;
 }
 
 #printer {
-font-family: 'JustusPrint';
+  font-family: 'JustusPrint';
 }
 
-#version{
-display:none;
+#version {
+  display: none;
 }
 
 
 #printerbody {
-width: 250px;
+  width: 250px;
 }
 
 #drivercard {
-font-family: times;
-overflow:hidden;
-display:none;
+  font-family: times;
+  overflow: hidden;
+  display: none;
 }
-#allcards{
-display:none;
+
+#allcards {
+  display: none;
 }
+
 #drivercardbody {
-overflow:hidden;
+  overflow: hidden;
 }
-.card{
-float:left;
-clear:none;
-width:400px;
-height:124px;
-margin-right:40px;
+
+.card {
+  float: left;
+  clear: none;
+  width: 400px;
+  height: 124px;
+  margin-right: 40px;
 
 }
 
-.leftcard{
-float:left;
-clear:none;
-width:195px;
-padding-left:5px;
+.leftcard {
+  float: left;
+  clear: none;
+  width: 195px;
+  padding-left: 5px;
 }
 
-.rightcard{
-float:left;
-clear:none;
-width:195px;
-padding-left:5px;
-margin-top:20px;
+.rightcard {
+  float: left;
+  clear: none;
+  width: 195px;
+  padding-left: 5px;
+  margin-top: 20px;
 }
 
-.rightcard  img{
-height:100px;
+.rightcard img {
+  height: 100px;
 }
 
-.leftcard  h1{
-clear:right;
-font-size:22px;
-font-weight:bold;
+.leftcard h1 {
+  clear: right;
+  font-size: 22px;
+  font-weight: bold;
 
 }
 
-.leftcard h2{
-height:77px;
-font-size:16px;
-overflow:hidden;
-font-weight:normal;
+.leftcard h2 {
+  height: 77px;
+  font-size: 16px;
+  overflow: hidden;
+  font-weight: normal;
 }
-.leftcard h3{
-font-size:14px;
-overflow:hidden;
-font-weight:normal;
+
+.leftcard h3 {
+  font-size: 14px;
+  overflow: hidden;
+  font-weight: normal;
 }
 
 #cards {
-width: 50000px;
-height:140px;
-position:absolute;
-left:-1px;
-overflow-y:hidden;
+  width: 50000px;
+  height: 140px;
+  position: absolute;
+  left: -1px;
+  overflow-y: hidden;
 }
+
 #cardnav {
-height: 25px; 
-position: absolute;
-top:146px;
-width:360px;
+  height: 25px;
+  position: absolute;
+  top: 146px;
+  width: 360px;
 }
-#cardnavholder{
-position: relative; 
-margin: auto;
-width:60px;
+
+#cardnavholder {
+  position: relative;
+  margin: auto;
+  width: 60px;
 }
 
 .cardbuttonholder {
-width:20px;
-float:left;
-clear:none;
-min-width:20px;
+  width: 20px;
+  float: left;
+  clear: none;
+  min-width: 20px;
 
 }
 
 .cardbuttonholder img {
-width: 20px;
-cursor :pointer;
+  width: 20px;
+  cursor: pointer;
 }
 
 
 
 .wideSelectorText {
-margin-top: 6.5%; 
-width: 100%; 
-height:40%; 
-background:black; 
-color: #76C140; 
-text-align: center;
+  margin-top: 6.5%;
+  width: 100%;
+  height: 40%;
+  background: black;
+  color: #76C140;
+  text-align: center;
 }
 
 .loadingBox {
-position: absolute;
-top: 56%;
-left: 50%;
-width: 47%; 
-height: 29%; 
-border-style: solid;
-border-width: 4px;
-}	
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  width: 47%;
+  height: 29%;
+  border-style: solid;
+  border-width: 4px;
+}
 
 .loadingBoxIcon {
-height: 100%; 
-background: black; 
+  height: 100%;
+  background: black;
 }
 
 .onOneLine {
-float:left;
+  float: left;
 }
 
 .selectedBox {
-text-align: center;
-background: black;
-color: #76C140;
-width: 30%;
-height:auto;
+  text-align: center;
+  background: black;
+  color: #76C140;
+  width: 30%;
+  height: auto;
 }
 
 .selectedPrintDateYear {
-padding-left: 5%;
+  padding-left: 5%;
 }
 
-@font-face{
-    font-family: JustusDisplay;
-    src: url(display.eot);
-}   
-@font-face{
-    font-family: JustusDisplay;
-    src: url(display.otf) format('opentype');
-}
-@font-face{
-    font-family: JustusDisplay;
-    src: url(display.ttf);
+@font-face {
+  font-family: JustusDisplay;
+  src: url(display.eot);
 }
 
-@font-face{
-    font-family: JustusPrint;
-    src: url(print.eot);
-}   
-@font-face{
-    font-family: JustusPrint;
-    src: url(print.otf) format('opentype');
-}
-@font-face{
-    font-family: JustusPrint;
-    src: url(print.ttf);
+@font-face {
+  font-family: JustusDisplay;
+  src: url(display.otf) format('opentype');
 }
 
-@font-face{
-    font-family: JustusTinyDigits;
-    src: url(tinyDigits.eot);
-}   
-@font-face{
-    font-family: JustusTinyDigits;
-    src: url(tinyDigits.otf) format('opentype');
+@font-face {
+  font-family: JustusDisplay;
+  src: url(display.ttf);
 }
-@font-face{
-    font-family: JustusTinyDigits;
-    src: url(tinyDigits.ttf);
+
+@font-face {
+  font-family: JustusPrint;
+  src: url(print.eot);
+}
+
+@font-face {
+  font-family: JustusPrint;
+  src: url(print.otf) format('opentype');
+}
+
+@font-face {
+  font-family: JustusPrint;
+  src: url(print.ttf);
+}
+
+@font-face {
+  font-family: JustusTinyDigits;
+  src: url(tinyDigits.eot);
+}
+
+@font-face {
+  font-family: JustusTinyDigits;
+  src: url(tinyDigits.otf) format('opentype');
+}
+
+@font-face {
+  font-family: JustusTinyDigits;
+  src: url(tinyDigits.ttf);
 }
 
 
-@font-face{
-    font-family: JustusDisplayHiRes;
-    src: url(displayHiRes.eot);
-}   
-@font-face{
-    font-family: JustusDisplayHiRes;
-    src: url(displayHiRes.otf);
+@font-face {
+  font-family: JustusDisplayHiRes;
+  src: url(displayHiRes.eot);
 }
-@font-face{
-    font-family: JustusDisplayHiRes;
-    src: url(displayHiRes.ttf);
+
+@font-face {
+  font-family: JustusDisplayHiRes;
+  src: url(displayHiRes.otf);
+}
+
+@font-face {
+  font-family: JustusDisplayHiRes;
+  src: url(displayHiRes.ttf);
 }
