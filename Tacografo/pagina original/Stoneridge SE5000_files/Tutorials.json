@@ -1,0 +1,236 @@
+STONE.TUTORIALS = [
+	{	
+		name:'Tutorial 0',
+		description: "This is a test",
+		drivercard: 1,
+		startdatetime:'November 23, 2011 11:13:00',
+		moviemode: true,
+		welcomedelay:100,
+		readydrivedelay:100,
+		lastwithdrawndelay:100,
+		startsequence:["ok","ok","ok","one","one"],
+		startsequencedelay:[200,200,200,200,10],
+		
+		completedAction: function(){alert("done");},
+		steps:[
+		       {type: 'input',  button: 'down', helpText: 'TUTORIAL_ONE_ONE', allowedkeys:['drive']},
+		       {type: 'input',  button: 'one', helpText: 'TUTORIAL_ONE_TWO', allowedkeys:[]},
+		       {type: 'input',  button: 'two', helpText: 'TUTORIAL_ONE_THREE', allowedkeys:[]},
+		       {type: 'input',  button: 'ok', helpText: 'TUTORIAL_ONE_FOUR', allowedkeys:['down','up']}
+		]
+	},
+
+	{	
+		name:'TUT01_head',
+		description: "TUT01_descr",
+		drivercard: 1,
+		startdatetime:'March 15, 2012 20:02:00',
+		moviemode: true,
+		welcomedelay:3500,
+		readydrivedelay:2000,
+		lastwithdrawndelay:2000,
+		startsequence:[],
+		endtext: 'TUT01_26',
+		steps:[
+		       {type: 'input',  button: 'down', helpText: 'TUT01_01', allowedkeys:[]},
+		       {type: 'input',  button: 'ok', helpText: 'TUT01_02', allowedkeys:[]},
+		       {type: 'input',  button: 'ok', helpText: 'TUT01_03', allowedkeys:[]},
+			   {type: 'input',  button: 'down', helpText: 'TUT01_04', allowedkeys:[]},
+			   {type: 'input',  button: 'down', helpText: 'TUT01_05', allowedkeys:[]},
+			   {type: 'input',  button: 'ok', helpText: 'TUT01_06', allowedkeys:[]},
+			   {type: 'input',  button: 'ok', helpText: 'TUT01_07', allowedkeys:[]},
+			   {type: 'input',  button: 'down', helpText: 'TUT01_08', allowedkeys:[]},
+			   {type: 'input',  button: 'down', helpText: 'TUT01_09', allowedkeys:[]},
+			   {type: 'input',  button: 'down', helpText: 'TUT01_10', allowedkeys:[]},
+			   {type: 'input',  button: 'ok', helpText: 'TUT01_11', allowedkeys:[]},
+			   {type: 'input',  button: 'down', helpText: 'TUT01_12', allowedkeys:[]},
+			   {type: 'input',  button: 'down', helpText: 'TUT01_12', allowedkeys:[]},
+			   {type: 'input',  button: 'ok', helpText: 'TUT01_13', allowedkeys:[]},
+			   {type: 'input',  button: 'ok', helpText: 'TUT01_14', allowedkeys:[]},
+			   {type: 'input',  button: 'down', helpText: 'TUT01_15', allowedkeys:[]},
+			   {type: 'input',  button: 'down', helpText: 'TUT01_16', allowedkeys:[]},
+			   {type: 'input',  button: 'down', helpText: 'TUT01_17', allowedkeys:[]},
+			   {type: 'input',  button: 'ok', helpText: 'TUT01_18', allowedkeys:[]},
+			   {type: 'input',  button: 'ok', helpText: 'TUT01_19', allowedkeys:[]},
+			   {type: 'input',  button: 'ok', helpText: 'TUT01_20', allowedkeys:[]},
+			   {type: 'input',  button: 'ok', helpText: 'TUT01_21', allowedkeys:[]},
+			   {type: 'input',  button: 'ok', helpText: 'TUT01_22', allowedkeys:[]},
+			   {type: 'input',  button: 'ok', helpText: 'TUT01_23', allowedkeys:[]},
+			   {type: 'input',  button: 'ok', helpText: 'TUT01_24', allowedkeys:[]},
+			   {type: 'input',  button: 'ok', helpText: 'TUT01_25', allowedkeys:[]},
+			   {type: 'input',  button: '', helpText: 'TUT01_26', allowedkeys:[]}
+		]
+	},
+
+	{	
+		name:'TUT02_head',
+		description: "TUT02_descr",
+		drivercard: 7,
+		moviemode: false,
+		welcomedelay:1,
+		readydrivedelay:1,
+		lastwithdrawndelay:1,
+		startsequence:["ok","ok","ok","down","down"],
+		startsequencedelay:[0,0,0,0,0],
+		steps:[
+		       {type: 'input',  button: '', helpText: ' ', allowedkeys:[]}
+		]
+	},
+	
+	{	
+		name:'TUT03_head',
+		description: "TUT03_descr",
+		drivercard: 2,
+		moviemode: false,
+		welcomedelay:1,
+		readydrivedelay:1,
+		lastwithdrawndelay:1,
+		startsequence:["ok","ok","ok"],
+		startsequencedelay:[0,0,0],
+		steps:[	
+		       {type: 'input',  button: 'ok', helpText: 'TUT_03_01', allowedkeys:[]},
+		       {type: 'input',  button: 'ok', helpText: 'TUT_03_02', allowedkeys:[]},
+		       {type: 'input',  button: 'ok', helpText: 'TUT_03_03', allowedkeys:[]},
+		       {type: 'input',  button: 'ok', helpText: 'TUT_03_04', allowedkeys:[]},
+		       {type: 'input',  button: 'down', helpText: 'TUT_03_05', allowedkeys:[]},
+		       {type: 'input',  button: 'ok', helpText: 'TUT_03_06', allowedkeys:[]},
+		       {type: 'input',  button: 'ok', helpText: 'TUT_03_07', allowedkeys:[]},
+		       {type: 'input',  button: 'back', helpText: 'TUT_03_08', allowedkeys:['up','down']},
+		       {type: 'input',  button: 'back', helpText: 'TUT_03_08', allowedkeys:['up','down']},
+		       {type: 'input',  button: '', helpText: ' ', allowedkeys:[]}
+		]
+	},
+	
+	{	
+		name:'TUT04_head',
+		description: "TUT04_descr",
+		removedlength:'0d0h0m',
+		moviemode: false,
+		welcomedelay:1,
+		readydrivedelay:1,
+		lastwithdrawndelay:1,
+		startsequence:["ok","ok","ok"],
+		startsequencedelay:[0,0,0],
+		endtext: 'TUT_04_end',
+		steps:[	
+		       {type: 'input',  button: 'none', helpText: 'TUT_04_01', allowedkeys:['one', 'two', 'up', 'down']}
+		]
+	},
+
+	{	
+		name:'TUT05_head',
+		description: "TUT05_descr",
+		removedlength:'0d0h0m',
+		moviemode: false,
+		welcomedelay:1,
+		readydrivedelay:1,
+		lastwithdrawndelay:1,
+		startsequence:["ok","ok","ok"],
+		startsequencedelay:[0,0,0],
+		steps:[	
+		       {type: 'input',  button: 'ok', helpText: 'TUT_05_01', allowedkeys:[]},
+		       {type: 'input',  button: 'down', helpText: 'TUT_05_02', allowedkeys:[]},
+		       {type: 'input',  button: 'ok', helpText: 'TUT_05_03', allowedkeys:[]},
+		       {type: 'input',  button: 'down', helpText: 'TUT_05_04', allowedkeys:[]},
+		       {type: 'input',  button: 'ok', helpText: 'TUT_05_05', allowedkeys:[]},
+		       {type: 'input',  button: 'back', helpText: 'TUT_05_06', allowedkeys:['up', 'down']},
+		       {type: 'input',  button: 'back', helpText: 'TUT_05_06', allowedkeys:['up', 'down']},
+		       {type: 'input',  button: '', helpText: ' ', allowedkeys:[]}
+		]
+	},
+	
+	{	
+		name:'TUT06_head',
+		description: "TUT06_descr",
+		drivercard: 6,
+		removedlength:'0d0h0m',
+		moviemode: false,
+		welcomedelay:1,
+		readydrivedelay:1,
+		lastwithdrawndelay:1,
+		startsequence:[],
+		startsequencedelay:[],
+		steps:[	
+		       {type: 'input',  button: 'ok', helpText: 'TUT_06_01', allowedkeys:[]},
+		       {type: 'input',  button: 'down', helpText: 'TUT_06_02', allowedkeys:[]},
+		       {type: 'input',  button: 'down', helpText: 'TUT_06_03', allowedkeys:[]},
+		       {type: 'input',  button: 'ok', helpText: 'TUT_06_04', allowedkeys:[]},
+		       {type: 'input',  button: 'ok', helpText: 'TUT_06_05', allowedkeys:[]},
+		       {type: 'input',  button: 'back', helpText: 'TUT_06_05.1', allowedkeys:['up','down']},
+		       {type: 'input',  button: 'ok', helpText: 'TUT_06_01', allowedkeys:[]},
+		       {type: 'input',  button: 'down', helpText: 'TUT_06_02', allowedkeys:[]},
+		       {type: 'input',  button: 'down', helpText: 'TUT_06_03', allowedkeys:[]},
+		       {type: 'input',  button: 'ok', helpText: 'TUT_06_06', allowedkeys:[]},
+		       {type: 'input',  button: 'ok', helpText: 'TUT_06_07', allowedkeys:[]},
+		       {type: 'input',  button: '', helpText: ' ', allowedkeys:[]}
+		],
+		endtext: 'TUT_06_end'
+	},
+	
+	{	
+		name:'TUT07_head',
+		description: "TUT07_descr",
+		drivercard: 6,
+		removedlength:'0d0h0m',
+		moviemode: false,
+		welcomedelay:1,
+		readydrivedelay:1,
+		lastwithdrawndelay:1,
+		startsequence:[],
+		startsequencedelay:[],
+		steps:[	
+		       {type: 'input',  button: 'ok', helpText: 'TUT_07_01', allowedkeys:[]},
+		       {type: 'input',  button: 'down', helpText: 'TUT_07_02', allowedkeys:[]},
+		       {type: 'input',  button: 'down', helpText: 'TUT_07_03', allowedkeys:[]},
+		       {type: 'input',  button: 'down', helpText: 'TUT_07_04', allowedkeys:[]},
+		       {type: 'input',  button: 'ok', helpText: 'TUT_07_05', allowedkeys:[]},
+		       {type: 'input',  button: 'down', helpText: 'TUT_07_06', allowedkeys:[]},
+		       {type: 'input',  button: 'down', helpText: 'TUT_07_06', allowedkeys:[]},
+		       {type: 'input',  button: 'down', helpText: 'TUT_07_06', allowedkeys:[]},
+		       {type: 'input',  button: 'down', helpText: 'TUT_07_06', allowedkeys:[]},
+		       {type: 'input',  button: 'down', helpText: 'TUT_07_06', allowedkeys:[]},
+		       {type: 'input',  button: 'ok', helpText: 'TUT_07_06', allowedkeys:[]},
+		       {type: 'input',  button: 'down', helpText: 'TUT_07_09', allowedkeys:[]},
+		       {type: 'input',  button: 'down', helpText: 'TUT_07_09', allowedkeys:[]},
+		       {type: 'input',  button: 'down', helpText: 'TUT_07_09', allowedkeys:[]},
+		       {type: 'input',  button: 'ok', helpText: 'TUT_07_09', allowedkeys:[]},
+		       {type: 'input',  button: 'down', helpText: 'TUT_07_12', allowedkeys:[]},
+		       {type: 'input',  button: 'down', helpText: 'TUT_07_12', allowedkeys:[]},
+		       {type: 'input',  button: 'down', helpText: 'TUT_07_12', allowedkeys:[]},
+		       {type: 'input',  button: 'ok', helpText: 'TUT_07_12', allowedkeys:[]},
+		       {type: 'input',  button: '', helpText: ' ', allowedkeys:[]}
+		],
+		endtext: 'TUT_07_end'
+	},	
+	
+	{	
+		name:'Insert card, rest until now',
+		description: " ",
+		removedlength:'0d0h0m',
+		moviemode: false,
+		welcomedelay:1,
+		readydrivedelay:1,
+		lastwithdrawndelay:1,
+		startsequence:["ok","ok","ok"],
+		startsequencedelay:[0,0,0],
+		steps:[]
+	},
+		
+	{	
+		name:'Tutorial zzzz',
+		description: "Settings menu, choosing language",
+		startdatetime:'12/25/2005 01:00PM',
+		startsequence:["ok","ok","ok","ok","down"],
+		moviemode: true,
+		completedAction: function(){alert("done");},
+		steps:[
+		       {type: 'input',  button: 'ok', helpText: 'press ok key', allowedkeys:['down','up']},
+		       {type: 'input',  button: 'one', helpText: 'press one key', allowedkeys:[]},
+		       {type: 'input',  button: 'two', helpText: 'press two key', allowedkeys:[]},
+		        {type: 'input',  button: 'down', helpText: 'press down key', allowedkeys:[]},
+		        {type: 'input',  button: 'back', helpText: 'press back key', allowedkeys:[]},
+		       {type: 'input',  button: 'ok', helpText: 'press ok key', allowedkeys:[]}
+		]
+	}
+		
+];

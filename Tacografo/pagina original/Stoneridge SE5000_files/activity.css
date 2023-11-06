@@ -1,0 +1,97 @@
+/* Copyright (c) Stoneridge Electronics AB 2007 - All rights reserved */
+
+#activity_date_container {
+	position:absolute; 
+	top:0em; 
+	left:8.3em; 
+	height:1.4em; 
+	width:4.5em;
+}
+
+#activity_date {
+	position: absolute; 
+	top: 0.25em; 
+	left: 0.25em;
+}
+
+#activity_hour_container {
+	position:absolute; 
+	top:1.4em; 
+	left:8.2em; 
+	height:1.5em; 
+	width:2em;
+}
+
+#activity_hour {
+	position:absolute; 
+	top:0.2em; 
+	left:0.3em;
+}
+
+#activity_minutes_container {
+	position:absolute; 
+	top:1.4em; 
+	left:10.7em; 
+	height:1.5em; 
+	width:2.1em;
+}
+
+#activity_minutes {
+	position:absolute; 
+	top:0.2em; 
+	left:0.3em;
+}
+
+#activity_delimiter {
+	position:absolute; 
+	top:1.5em; 
+	left:9.25em;
+}
+
+.revertedcolors {
+	color: #75c241;
+	background:#000000;
+}
+
+.dateFormat {
+	text-align: center;
+	font-family: 'JustusTinyDigits';
+	font-size: 0.95em;
+}
+
+.startActivityType {
+	width:14%; 
+	height: 80%; 
+	position:absolute; 
+	top:0.3em; 
+	left:6em;
+}
+
+.startRowOne {
+	position:absolute; 
+	top:0.15em; 
+	left:8em;
+}
+
+.startRowTwo {
+	position:absolute; 
+	top:1.5em; 
+	left:8em;
+}
+
+.leftDateDiv {
+	position:absolute; 
+	top:0.25em; 
+	left: 1.6em;
+	width:4.5em;
+}
+
+.timeDidigts {
+	font-size: 1.1em;
+}
+
+.leftTimeDiv {
+	position:absolute; 
+	top: 1.4em; 
+	left: 1.45em;
+}

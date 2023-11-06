@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)https://www.se5000.com/simulator/default.php -->
+<html class="no-js" lang="en"><!--<![endif]-->
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Stoneridge SE5000</title>
+  <link rel="stylesheet" href="./Stoneridge SE5000_files/style.css">
+  <link rel="stylesheet" href="./Stoneridge SE5000_files/jquery-ui-1.8.11.custom.css">
+  <link rel="stylesheet" href="./Stoneridge SE5000_files/main.css">
+  <link rel="stylesheet" href="./Stoneridge SE5000_files/activity.css">
+  <link rel="shortcut icon" href="https://www.se5000.com/simulator/favicon.ico">
+  <style type="text/css">
+    a {
+      text-decoration: none;
+    }
+
+    .simname {
+      padding-bottom: 5px;
+    }
+
+    .simentry {
+      font-size: 20px;
+      font-family: verdana;
+      text-align: center;
+      padding-bottom: 25px;
+      height: 80%
+    }
+
+    img {
+      border: none;
+      height: auto;
+      width: 60%;
+    }
+  </style>
+  <script type="text/javascript" src="./Stoneridge SE5000_files/versions.json"></script>
+  <script charset="utf-8"
+    src="chrome-extension://donbcfbmhbcapadipfkeojnmajbakjdc/dist/ruffle.js?id=68587676730"></script>
+  <script type="text/javascript" src="./Stoneridge SE5000_files/loadconfig.json"></script>
+  <script type="text/javascript" src="./Stoneridge SE5000_files/jquery-1.5.1.min.js"></script>
+  <script type="text/javascript" src="./Stoneridge SE5000_files/jquery-ui-1.8.11.custom.min.js"></script>
+  <script type="text/javascript" src="./Stoneridge SE5000_files/constanter.js"></script>
+  <script type="text/javascript" src="./Stoneridge SE5000_files/countrylist.js"></script>
+  <script type="text/javascript" src="./Stoneridge SE5000_files/i18n.js"></script>
+  <script type="text/javascript" id="uploadScriptlang_en" src="./Stoneridge SE5000_files/languages_en.json"></script>
+  <script type="text/javascript" src="./Stoneridge SE5000_files/driverCards.json"></script>
+  <script type="text/javascript" src="./Stoneridge SE5000_files/Tutorials.json"></script>
+  <script type="text/javascript" src="./Stoneridge SE5000_files/app.min.js"></script>
+</head>
+
+<body ontouchmove="BlockMove('move',event);" ontouchstart="BlockMove('start',event);"
+  ontouchend="BlockMove('end',event);">
+  <div id="simulator" style="width:98%;">
+    <div id="emulator"><img id="background" src="images/background75.jpg">
+      <div id="textdisplay" class="display" style="font-size: 1.38em;">
+        <div class="row1">&nbsp;00h01&nbsp;&nbsp;00h00</div>
+        <div class="row2">&nbsp;00h00&nbsp;&nbsp;&nbsp;09:43</div>
+      </div>
+      <div id="back" class="imgContainer"><img src="images/back.png" class="displaying"><img
+          src="images/back_pressed.png" class="hidding"></div>
+      <div id="up" class="imgContainer"><img src="images/up.png" class="displaying"><img src="images/up_pressed.png"
+          class="hidding"></div>
+      <div id="down" class="imgContainer"><img src="images/down.png" class="displaying"><img
+          src="images/down_pressed.png" class="hidding"></div>
+      <div id="ok" class="imgContainer"><img src="images/ok.png" class="displaying"><img src="images/ok_pressed.png"
+          class="hidding"></div>
+      <div id="one" class="imgContainer"><img src="images/one.png" class="displaying"><img src="images/one_pressed.png"
+          class="hidding"></div>
+      <div id="two" class="imgContainer"><img src="images/two.png" class="displaying"><img src="images/two_pressed.png"
+          class="hidding"></div>
+      <div id="slot1open" class="hidding"></div>
+      <div id="slot2open" class="hidding"></div><img src="images/17520602781599729241.png" id="slot1select"
+        class="hidding"><img src="images/17520602781599729241.png" id="slot2select" class="hidding">
+    </div>
+    <div id="tutorialstepsheading"></div>
+    <div id="tutorialsteps"></div>
+    <div id="version" title="Stoneridge Simulator Version">
+      <div>
+        <h1 id="simversion"></h1>
+        <h1 id="simdesc"></h1>
+        <h1 id="simtype"></h1>
+        <h1 id="simbuild"></h1>
+        <h2>All rights reserved</h2>
+      </div>
+    </div>
+    <div id="ferryinfo" title="Ferry / Train display">
+      <div>
+        <p id="ferryTemporaryInfoNote"></p>
+      </div>
+    </div>
+  </div>
+  <script src="js/bootloader.js"></script>
+
+
+  <div class="ui-dialog ui-widget ui-widget-content ui-corner-all  ui-draggable" tabindex="-1" role="dialog"
+    aria-labelledby="ui-dialog-title-drivercard"
+    style="display: none; z-index: 1000; outline: 0px; height: auto; width: 400px;">
+    <div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span class="ui-dialog-title"
+        id="ui-dialog-title-drivercard">Load card</span><a href="#" class="ui-dialog-titlebar-close ui-corner-all"
+        role="button" style="display: none;"><span class="ui-icon ui-icon-closethick">close</span></a></div>
+    <div id="drivercard" class="ui-dialog-content ui-widget-content"
+      style="display: block; width: auto; min-height: 0px; height: 166.72px;">
+      <div id="drivercardbody">
+        <div id="cardtype"><select id="selectcardtype">
+            <option value="driver">Driver card</option>
+            <option value="control">Control card</option>
+            <option value="company">Company card</option>
+            <option value="workshop">Workshop card</option>
+            <option value="empty">No card inserted</option>
+          </select></div>
+        <div id="allcards">
+          <div cardid="0" cardtype="driver" class="card">
+            <div class="leftcard">
+              <h1>Test</h1>
+              <h2>Empty card.</h2>
+              <h3>Card removal duration:0d0h0m</h3>
+            </div>
+            <div class="rightcard"><img src="images/drivercard1.gif"></div>
+          </div>
+          <div cardid="1" cardtype="driver" class="card">
+            <div class="leftcard">
+              <h1>Smith</h1>
+              <h2>Card has been out for 5h14, after driving for one day.</h2>
+              <h3>Card removal duration:0d4h39m</h3>
+            </div>
+            <div class="rightcard"><img src="images/drivercard1.gif"></div>
+          </div>
+          <div cardid="2" cardtype="driver" class="card">
+            <div class="leftcard">
+              <h1>Pascal</h1>
+              <h2>Two consecutive days of driving.</h2>
+              <h3>Card removal duration:0d5h50m</h3>
+            </div>
+            <div class="rightcard"><img src="images/drivercard1.gif"></div>
+          </div>
+          <div cardid="3" cardtype="control" class="card">
+            <div class="leftcard">
+              <h1>Newton</h1>
+              <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus hendrerit mollis.</h2>
+              <h3>Card removal duration:2d4h22m</h3>
+            </div>
+            <div class="rightcard"><img src="images/drivercard2.gif"></div>
+          </div>
+          <div cardid="4" cardtype="control" class="card">
+            <div class="leftcard">
+              <h1>Herz</h1>
+              <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus hendrerit mollis.</h2>
+              <h3>Card removal duration:2d4h22m</h3>
+            </div>
+            <div class="rightcard"><img src="images/drivercard2.gif"></div>
+          </div>
+          <div cardid="5" cardtype="control" class="card">
+            <div class="leftcard">
+              <h1>Tesla</h1>
+              <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus hendrerit mollis.</h2>
+              <h3>Card removal duration:2d4h22m</h3>
+            </div>
+            <div class="rightcard"><img src="images/drivercard2.gif"></div>
+          </div>
+          <div cardid="6" cardtype="company" class="card">
+            <div class="leftcard">
+              <h1>Williams&amp;Sons</h1>
+              <h2>A company card.</h2>
+              <h3>Card removal duration:0d0h0m</h3>
+            </div>
+            <div class="rightcard"><img src="images/drivercard1.gif"></div>
+          </div>
+          <div cardid="7" cardtype="driver" class="card">
+            <div class="leftcard">
+              <h1>Morning</h1>
+              <h2>Example 1: Beginning Your Day</h2>
+              <h3>Card removal duration:0d0h0m</h3>
+            </div>
+            <div class="rightcard"><img src="images/drivercard1.gif"></div>
+          </div>
+          <div cardid="8" cardtype="driver" class="card">
+            <div class="leftcard">
+              <h1>Break</h1>
+              <h2>Example 2: Time For A Break</h2>
+              <h3>Card removal duration:0d0h0m</h3>
+            </div>
+            <div class="rightcard"><img src="images/drivercard1.gif"></div>
+          </div>
+          <div cardid="9" cardtype="driver" class="card">
+            <div class="leftcard">
+              <h1>Afternoon</h1>
+              <h2>Example 2a: After fulfilled break</h2>
+              <h3>Card removal duration:0d0h0m</h3>
+            </div>
+            <div class="rightcard"><img src="images/drivercard1.gif"></div>
+          </div>
+          <div cardid="10" cardtype="driver" class="card">
+            <div class="leftcard">
+              <h1>Break II</h1>
+              <h2>Example 3: Time for 2nd break</h2>
+              <h3>Card removal duration:0d0h0m</h3>
+            </div>
+            <div class="rightcard"><img src="images/drivercard1.gif"></div>
+          </div>
+          <div cardid="11" cardtype="driver" class="card">
+            <div class="leftcard">
+              <h1>Evening</h1>
+              <h2>Example 4: At Daily Period Limit</h2>
+              <h3>Card removal duration:0d0h0m</h3>
+            </div>
+            <div class="rightcard"><img src="images/drivercard1.gif"></div>
+          </div>
+          <div cardid="12" cardtype="driver" class="card">
+            <div class="leftcard">
+              <h1>Night</h1>
+              <h2>Example 4: At Daily Period Limit</h2>
+              <h3>Card removal duration:0d0h0m</h3>
+            </div>
+            <div class="rightcard"><img src="images/drivercard1.gif"></div>
+          </div>
+          <div cardid="13" cardtype="driver" class="card">
+            <div class="leftcard">
+              <h1>Weekend</h1>
+              <h2>Example 5: At Weekly Period Limit</h2>
+              <h3>Card removal duration:0d0h0m</h3>
+            </div>
+            <div class="rightcard"><img src="images/drivercard1.gif"></div>
+          </div>
+          <div cardid="14" cardtype="driver" class="card">
+            <div class="leftcard">
+              <h1>Weektime</h1>
+              <h2>Example 5: At Weekly Drive Time Limit. (Must be used with a scenario to work because of calendar week
+                dependency)</h2>
+              <h3>Card removal duration:0d0h0m</h3>
+            </div>
+            <div class="rightcard"><img src="images/drivercard1.gif"></div>
+          </div>
+          <div cardid="15" cardtype="workshop" class="card">
+            <div class="leftcard">
+              <h1>Svensson</h1>
+              <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus hendrerit mollis.</h2>
+              <h3>Card removal duration:4d4h22m</h3>
+            </div>
+            <div class="rightcard"><img src="images/drivercard2.gif"></div>
+          </div>
+        </div>
+        <div id="cards" style="left: 0px;">
+          <div cardid="0" cardtype="driver" class="card">
+            <div class="leftcard">
+              <h1>Test</h1>
+              <h2>Empty card.</h2>
+              <h3>Card removal duration:0d0h0m</h3>
+            </div>
+            <div class="rightcard"><img src="images/drivercard1.gif"></div>
+          </div>
+          <div cardid="1" cardtype="driver" class="card">
+            <div class="leftcard">
+              <h1>Smith</h1>
+              <h2>Card has been out for 5h14, after driving for one day.</h2>
+              <h3>Card removal duration:0d4h39m</h3>
+            </div>
+            <div class="rightcard"><img src="images/drivercard1.gif"></div>
+          </div>
+          <div cardid="2" cardtype="driver" class="card">
+            <div class="leftcard">
+              <h1>Pascal</h1>
+              <h2>Two consecutive days of driving.</h2>
+              <h3>Card removal duration:0d5h50m</h3>
+            </div>
+            <div class="rightcard"><img src="images/drivercard1.gif"></div>
+          </div>
+          <div cardid="7" cardtype="driver" class="card">
+            <div class="leftcard">
+              <h1>Morning</h1>
+              <h2>Example 1: Beginning Your Day</h2>
+              <h3>Card removal duration:0d0h0m</h3>
+            </div>
+            <div class="rightcard"><img src="images/drivercard1.gif"></div>
+          </div>
+          <div cardid="8" cardtype="driver" class="card">
+            <div class="leftcard">
+              <h1>Break</h1>
+              <h2>Example 2: Time For A Break</h2>
+              <h3>Card removal duration:0d0h0m</h3>
+            </div>
+            <div class="rightcard"><img src="images/drivercard1.gif"></div>
+          </div>
+          <div cardid="9" cardtype="driver" class="card">
+            <div class="leftcard">
+              <h1>Afternoon</h1>
+              <h2>Example 2a: After fulfilled break</h2>
+              <h3>Card removal duration:0d0h0m</h3>
+            </div>
+            <div class="rightcard"><img src="images/drivercard1.gif"></div>
+          </div>
+          <div cardid="10" cardtype="driver" class="card">
+            <div class="leftcard">
+              <h1>Break II</h1>
+              <h2>Example 3: Time for 2nd break</h2>
+              <h3>Card removal duration:0d0h0m</h3>
+            </div>
+            <div class="rightcard"><img src="images/drivercard1.gif"></div>
+          </div>
+          <div cardid="11" cardtype="driver" class="card">
+            <div class="leftcard">
+              <h1>Evening</h1>
+              <h2>Example 4: At Daily Period Limit</h2>
+              <h3>Card removal duration:0d0h0m</h3>
+            </div>
+            <div class="rightcard"><img src="images/drivercard1.gif"></div>
+          </div>
+          <div cardid="12" cardtype="driver" class="card">
+            <div class="leftcard">
+              <h1>Night</h1>
+              <h2>Example 4: At Daily Period Limit</h2>
+              <h3>Card removal duration:0d0h0m</h3>
+            </div>
+            <div class="rightcard"><img src="images/drivercard1.gif"></div>
+          </div>
+          <div cardid="13" cardtype="driver" class="card">
+            <div class="leftcard">
+              <h1>Weekend</h1>
+              <h2>Example 5: At Weekly Period Limit</h2>
+              <h3>Card removal duration:0d0h0m</h3>
+            </div>
+            <div class="rightcard"><img src="images/drivercard1.gif"></div>
+          </div>
+          <div cardid="14" cardtype="driver" class="card">
+            <div class="leftcard">
+              <h1>Weektime</h1>
+              <h2>Example 5: At Weekly Drive Time Limit. (Must be used with a scenario to work because of calendar week
+                dependency)</h2>
+              <h3>Card removal duration:0d0h0m</h3>
+            </div>
+            <div class="rightcard"><img src="images/drivercard1.gif"></div>
+          </div>
+        </div>
+        <div id="cardnav">
+          <div id="cardnavholder">
+            <div id="cardleftbutton" class="cardbuttonholder">&nbsp;<img src="images/arrow-left-red.png"
+                class="cardleftnav" style="display: none;"></div>
+            <div id="cardspacingbutton" class="cardbuttonholder"></div>
+            <div id="cardrightbutton" class="cardbuttonholder">&nbsp;<img src="images/arrow-right-red.png"
+                id="cardrightnav" class="cardrightnav"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui-dialog ui-widget ui-widget-content ui-corner-all  ui-draggable" tabindex="-1" role="dialog"
+    aria-labelledby="ui-dialog-title-printer" style="display: none; z-index: 1000; outline: 0px;">
+    <div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span class="ui-dialog-title"
+        id="ui-dialog-title-printer">Printer</span><a href="#" class="ui-dialog-titlebar-close ui-corner-all"
+        role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div>
+    <div id="printer" class="ui-dialog-content ui-widget-content">
+      <div id="printerheader" class="centerprinterblock"></div>
+      <div id="printerbody"></div>
+    </div>
+  </div>
+</body>
+
+</html>
